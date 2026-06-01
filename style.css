@@ -1,0 +1,162 @@
+/* ==========================
+   CSS VARIABLES
+========================== */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --primary-color: #2563eb;
+    --card-color: #f5f5f5;
+    --shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #60a5fa;
+    --card-color: #1e1e1e;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+    line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ==========================
+   GRID LAYOUT
+========================== */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section,
+article {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* ==========================
+   SKILLS FLEXBOX
+========================== */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 10px 15px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (min-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================
+   DESKTOP
+========================== */
+
+@media (min-width: 1024px) {
+
+    main {
+        grid-template-columns: 2fr 1fr;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
